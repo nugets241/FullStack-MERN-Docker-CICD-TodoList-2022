@@ -1,0 +1,56 @@
+GET http://localhost:5000/ HTTP/1.1
+###
+GET http://localhost:5000/api/v1 HTTP/1.1
+###
+GET http://localhost:5000/api/v1/emojis HTTP/1.1
+###
+GET http://localhost:5000/api/v1/tasks HTTP/1.1
+###
+GET http://localhost:5000/api/v1/tasks/4 HTTP/1.1
+###
+POST http://localhost:5000/api/v1/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "id": "4",
+    "name": "Buy groceries"
+}
+###
+PATCH  http://localhost:5000/api/v1/tasks/4 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Buy new Lamborghini"
+}
+###
+DELETE http://localhost:5000/api/v1/tasks/4 HTTP/1.1
+content-type: application/json
+
+##### MongoDB ###
+
+###
+GET http://localhost:5000/api/v1/task/list HTTP/1.1
+###
+POST http://localhost:5000/api/v1/task/list HTTP/1.1
+content-type: application/json
+
+[
+    { "id": "1", "name": "Hit the gym", "done": false },
+    { "id": "2", "name": "Pay bills", "done": true },
+    { "id": "3", "name": "Read a book", "done": false }
+]
+###
+GET http://localhost:5000/api/v1/task/list/639f6f686839b0b73129c2f4 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/v1/task/list/639f6f686839b0b73129c2f4 HTTP/1.1
+content-type: application/json
+
+[
+    { "id": "4", "name": "Hit the gym", "done": false },
+    { "id": "5", "name": "Pay bills", "done": false },
+    { "id": "6", "name": "Read a book", "done": false }
+]
+###
+DELETE http://localhost:5000/api/v1/tasks/list/639f6669ff00008e7e5fc148 HTTP/1.1
+content-type: application/json

@@ -1,0 +1,28 @@
+services:
+  frontend:
+    image: ${FRONTEND_IMAGE}
+    ports:
+      - "8080:3000"
+    env_file:
+      - .env
+    restart: always
+  backend:
+    image: ${BACKEND_IMAGE}
+    ports:
+      - "4040:5000"
+    env_file:
+      - .env
+    restart: always
+    environment:
+      - DB_URI=mongodb+srv://Todo:todo2022@cluster0.venvkbr.mongodb.net/ToDoApp?retryWrites=true&w=majority
+  db:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=Todo
+      - MONGO_INITDB_ROOT_PASSWORD=todo2022
+    volumes:
+      - db_data_container:/data/db
+volumes:
+  db_data_container:
