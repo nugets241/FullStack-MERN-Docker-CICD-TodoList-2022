@@ -1,33 +1,71 @@
-# Final Project for Web Software Development Fall 2022
-This is a simple full stack project for a TAMK Web Software Development course. I have created a simple ToDo-list that let's you add and delete items
-in a way that's simple for you and also mark items as completed.
+# To-Do List Application
 
-## Why?
-Though the project exists as a necessity for a course, it is by no means my only motivation. I am and was interested to see what I can do with all the knowledge I have gained so far and put it to the test by creating a good quality website with good error handling.
+![To-Do List Application Screenshot](todo-ss.png)
 
-## What is it? How does it work?
-What I have here is a simple browser based ToDo-list app. It allows you to list your current to do -tasks, mark them as done, remove them if needed. Easy to use and handy to have in your phone or computer if you like ticking items of a list!
+## Overview
 
-## Server address and endpoints
-Find the frontend at http://172.16.5.184:8080
-Find the backend at http://172.16.5.184:4040
+This is a fullstack To-Do List application built using the MERN stack (MongoDB, Express, React, Node.js). The application allows users to manage their tasks efficiently with features like adding, editing, and deleting tasks.
 
-## Instructions for running the application locally
-To run this app locally, please access http://localhost:3000 for the frontend and http://localhost:5000/api/v1/tasks for the backend.
+## Objective
 
-## Tech
-I am utilizing Docker and the GitLab remote repository while building this project.
+Develop a fullstack web application to help users manage their tasks efficiently.
 
-## Tests
-This project is running 5 different tests for both frontend and backend. Test can be found through frontend/src/App.test.js and backend/test.
+## Duration
 
-## Credits
-I would like to credit this whole project to the guidance of our teacher one Mr. Louis Botha. Thank you very much indeed.
+September 2022 — December 2022
 
-## Releases:
--Version 0.1.0 (Phase 1 completed)
--Version 0.2.0 (Phase 2 completed)
--Version 0.3.0 (Phase 3 completed)
--Version 0.4.0 (Phase 4 completed)
--Version 0.5.0 (Phase 5 completed)
--Final version 1.0.0
+## Team Size
+
+Group of 2 (Backend and Frontend), but I completed all
+
+## Tech Stack
+
+- **Frontend:** ReactJS
+- **Backend:** ExpressJS, Node.js
+- **Database:** MongoDB
+- **Containerization:** Docker
+
+## Key Features
+
+- **Task Management:** Create, edit, and delete tasks with ease.
+- **Task Status:** Mark tasks as completed or pending.
+- **Responsive UI:** Supports various screen resolutions.
+- **RESTful API:** Backend API built with ExpressJS to handle CRUD operations.
+
+## Achievements
+
+- **Efficient Task Management:** Provided users with a simple and effective way to manage their tasks.
+- **Scalable Architecture:** Built a scalable and maintainable codebase using the MERN stack.
+- **Containerized Deployment:** Utilized Docker for easy deployment and scalability.
+- **CI/CD Integration:** Implemented continuous integration and deployment pipelines.
+
+## Setup and Installation
+
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/yourusername/FullStack-MERN-Docker-CICD-TodoList-2022.git
+    cd FullStack-MERN-Docker-CICD-TodoList-2022
+    ```
+
+2. **Set up environment variables:**
+    Create a `.env` file in the backend directory with the following content:
+    ```env
+    DB_URI=mongodb://username:password@host:port/database
+    ```
+
+3. **Install dependencies:**
+    ```sh
+    npm install
+    ```
+
+4. **Start the backend server:**
+    ```sh
+    npm run start
+    ```
+
+5. **Start the frontend server:**
+    ```sh
+    cd frontend
+    npm install
+    npm start
+    ```
