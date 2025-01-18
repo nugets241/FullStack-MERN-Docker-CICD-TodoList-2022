@@ -53,7 +53,6 @@ build_other:
   services:
     - docker:dind
   script:
-    - docker login -u gitlab-ci-token -p "${CI_JOB_TOKEN}" "${CI_REGISTRY}"
     # Build & push backend
     - docker build -f backend/DockerfileServer -t "${BACKEND_IMAGE}" .
     # Build & push frontend
