@@ -1,14 +1,13 @@
-version: '3.7'
 services:
   frontend:
     build:
       context: ./frontend
     ports:
-      - '3000:3000'
+      - "3000:3000"
     volumes:
-      - './frontend:/opt/app'
+      - "./frontend:/opt/app"
     environment:
-      - "CI:'true'"
+      - "CI=true"
     restart: always
     depends_on:
       - backend
@@ -16,12 +15,12 @@ services:
     build:
       context: ./backend
     ports:
-      - '5000:5000'
+      - "5000:5000"
     volumes:
-      - './backend:/opt/app'
-    restart: always 
-    environment:
-      - DB_URI=mongodb://db:27017/task
+      - "./backend:/opt/app"
+    restart: always
+    env_file:
+      - .env
     depends_on:
       - db
   db:
