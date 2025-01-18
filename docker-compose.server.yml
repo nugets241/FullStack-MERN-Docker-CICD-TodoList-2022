@@ -14,7 +14,7 @@ services:
       - .env
     restart: always
     environment:
-      - DB_URI=mongodb+srv://Todo:todo2022@cluster0.venvkbr.mongodb.net/ToDoApp?retryWrites=true&w=majority
+      - DB_URI=mongodb+srv://Todo:todo2022@cluster0.pcbnt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
   db:
     image: mongo:latest
     ports:
